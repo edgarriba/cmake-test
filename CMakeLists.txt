@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.7)
 
 project(cmake-test)
 
+set(TinyCNN_USE_TBB ON)
 find_package(TinyCNN)
 
 message(STATUS ${TINYCNN_FOUND})

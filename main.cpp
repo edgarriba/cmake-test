@@ -6,5 +6,5 @@ using namespace std;
 
 int main(int argc, char** argv) {
     
-    models::alex_net net;
+    models::alexnet net;
 }
