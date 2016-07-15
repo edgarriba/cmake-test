@@ -5,10 +5,11 @@ project(cmake-test)
 find_package(TinyCNN)
 
 message(STATUS ${TINYCNN_FOUND})
-message(STATUS ${TINYCNN_VERSION})
-message(STATUS ${TINYCNN_INCLUDE_DIRS})
-message(STATUS ${TINYCNN_LIBRARIES})
+message(STATUS ${TinyCNN_VERSION})
+message(STATUS ${TinyCNN_INCLUDE_DIRS})
+message(STATUS ${TinyCNN_LIBRARIES})
 
-include_directories(${TINYCNN_INCLUDE_DIRS})
-add_executable(tiny_cnn_test main.cpp ${TINYCNN_INCLUDE_DIRS})
-target_link_libraries(tiny_cnn_test ${TINYCNN_LIBRARIES})
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(tiny_cnn_test main.cpp)
+target_link_libraries(tiny_cnn_test ${TinyCNN_LIBRARIES})
